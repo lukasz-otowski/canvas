@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+    <style>
+        body {
+            background: #000;
+        }
+        .logo {
+            display: block;
+            left: 100px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="logo" class="logo" width="200px" height="200px"></canvas>
+
+    <script>
+        var can = document.getElementById("logo");
+        var canCtx = can.getContext('2d');
+
+        //add background at whole canvas
+        canCtx.beginPath();
+        canCtx.rect(0, 0, 200, 200);
+        canCtx.fillStyle = "#000";
+        canCtx.fill();
+
+        //make a blue circle
+        canCtx.beginPath();
+        //context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+        canCtx.arc(100, 100, 75, 0, 2 * Math.PI);
+        canCtx.lineWidth = 8;
+        canCtx.strokeStyle = "#00f";
+        canCtx.stroke();
+
+        //draw black rectangle beneath the blue line
+        canCtx.beginPath();
+        canCtx.rect(85, 0, 30, 100)
+        canCtx.fillStyle = '#000';
+        canCtx.fill();
+
+        //draw a blue line with rounded end caps
+        canCtx.beginPath();
+        //"lineCap" properties butt/round/square
+        canCtx.lineCap = "round";
+        canCtx.moveTo(100, 100);
+        canCtx.lineTo(100, 20);
+        canCtx.lineWidth = 8;
+        canCtx.strokeStyle = '#00f';
+        canCtx.stroke();
+
+    </script>
+</body>
+
+</html>
