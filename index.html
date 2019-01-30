@@ -5,7 +5,7 @@
     <title>Canvas</title>
     <style>
         body {
-            background: #000;
+            background: #0f0;
         }
         .logo {
             display: block;
@@ -33,13 +33,13 @@
         canCtx.beginPath();
         //context.arc(x,y,r,sAngle,eAngle,counterclockwise);
         canCtx.arc(100, 100, 75, 0, 2 * Math.PI);
-        canCtx.lineWidth = 8;
+        canCtx.lineWidth = 15;
         canCtx.strokeStyle = "#00f";
         canCtx.stroke();
 
         //draw black rectangle beneath the blue line
         canCtx.beginPath();
-        canCtx.rect(85, 0, 30, 100)
+        canCtx.rect(80, 0, 40, 100)
         canCtx.fillStyle = '#000';
         canCtx.fill();
 
@@ -49,7 +49,7 @@
         canCtx.lineCap = "round";
         canCtx.moveTo(100, 100);
         canCtx.lineTo(100, 20);
-        canCtx.lineWidth = 8;
+        canCtx.lineWidth = 15;
         canCtx.strokeStyle = '#00f';
         canCtx.stroke();
 
